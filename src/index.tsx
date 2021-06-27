@@ -74,7 +74,7 @@ const blockDefinition: BlockDefinition = {
     configurationSchema: configurationSchema,
     uiSchema: uiSchema,
     label: 'Countdown Widget',
-    iconUrl: "https://example-widget.staffbase.com/icons/weather-forecast.svg",
+    iconUrl: "https://maximizeit.github.io/sb-custom-widget-countdown/resources/clock-icon.png",
 };
 
 /**
