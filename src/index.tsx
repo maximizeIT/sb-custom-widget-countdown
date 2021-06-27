@@ -73,7 +73,8 @@ const blockDefinition: BlockDefinition = {
     blockLevel: 'block',
     configurationSchema: configurationSchema,
     uiSchema: uiSchema,
-    label: 'Custom Widget Countdown'
+    label: 'Countdown Widget',
+    iconUrl: "https://example-widget.staffbase.com/icons/weather-forecast.svg",
 };
 
 /**
