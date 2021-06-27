@@ -48,17 +48,17 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
 
   const titleStyle: CSS.Properties = {
     color: titlecolor,
+    margin: "5px 0px"
   };
 
   const containerStyle: CSS.Properties = {
-    margin: "20px 0 25px 0",
-    fontSize: "30px",
     display: "block",
     textAlign: "center"
   };
 
-  const divContentStyle: CSS.Properties = {
-    margin: "20px 0",
+  const boxStyle: CSS.Properties = {
+    fontSize: "30px",
+    margin: "0px 5px 0px 0px",
     marginRight: "5px",
     display: "inline-block",
     borderRadius: "5px",
@@ -72,7 +72,7 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
 
   const smalltextStyle: CSS.Properties = {
     paddingTop: "5px",
-    fontSize: "16px",
+    fontSize: "14px",
     display: "inline-block"
   };
 
@@ -82,9 +82,9 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
 
   return <div style={containerStyle}>
     <h2 style={titleStyle}>{title}</h2>
-    <div style={divContentStyle}><div>{days}</div><span style={smalltextStyle}>Days</span></div>
-    <div style={divContentStyle}><div>{hours}</div><span style={smalltextStyle}>Hours</span></div>
-    <div style={divContentStyle}><div>{minutes}</div><span style={smalltextStyle}>Mins</span></div>
-    <div style={divContentStyle}><div>{seconds}</div><span style={smalltextStyle}>Secs</span></div>
+    <div style={boxStyle}><div>{days}</div><span style={smalltextStyle}>Days</span></div>
+    <div style={boxStyle}><div>{hours}</div><span style={smalltextStyle}>Hours</span></div>
+    <div style={boxStyle}><div>{minutes}</div><span style={smalltextStyle}>Mins</span></div>
+    <div style={boxStyle}><div>{seconds}</div><span style={smalltextStyle}>Secs</span></div>
   </div>;
 };
