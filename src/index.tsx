@@ -73,7 +73,7 @@ const blockDefinition: BlockDefinition = {
     blockLevel: 'block',
     configurationSchema: configurationSchema,
     uiSchema: uiSchema,
-    label: 'Countdown Widget',
+    label: 'Countdown',
     iconUrl: "https://maximizeit.github.io/sb-custom-widget-countdown/resources/clock-icon.png",
 };
 
