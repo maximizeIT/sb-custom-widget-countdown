@@ -22,13 +22,11 @@ export const configurationSchema: JSONSchema7 = {
   properties: {
     title: {
       type: "string",
-      title: "Title",
-      description: "Choose the title of the countdown."
+      title: "Title"
     },
     titlecolor: {
       type: "string",
       title: "Title Color",
-      description: "Choose the color for title of the countdown. Default: #333333",
       default: "#333333"
     },
     countdowndate: {
@@ -39,19 +37,16 @@ export const configurationSchema: JSONSchema7 = {
     boxescolorbg: {
       type: "string",
       title: "Background Color",
-      description: "Choose the color for the background of the countdown boxes. Default: #FBC91E",
       default: "#FBC91E"
     },
     boxescolorborder: {
       type: "string",
       title: "Border Color",
-      description: "Choose the color for the border of the countdown boxes. Default: #FBC91E",
       default: "#FBC91E"
     },
     boxescolortext: {
       type: "string",
       title: "Text Color",
-      description: "Choose the color for the text in the countdown boxes. Default: #FFFFFF",
       default: "#FFFFFF"
     },
   },
@@ -65,18 +60,23 @@ export const uiSchema: UiSchema = {
   title: {
     "ui:autofocus": true,
     "ui:emptyValue": "",
-    "ui:autocomplete": "countdown-title"
+    "ui:autocomplete": "off",
+    "ui:help": "Choose a title for the countdown."
   },
   titlecolor: {
-    "ui:widget": "color"
+    "ui:widget": "color",
+    "ui:help": "Choose a color for title of the countdown. Default: #333333"
   },
   boxescolorbg: {
-    "ui:widget": "color"
+    "ui:widget": "color",
+    "ui:help": "Choose a color for the background of the countdown boxes. Default: #FBC91E"
   },
   boxescolorborder: {
-    "ui:widget": "color"
+    "ui:widget": "color",
+    "ui:help": "Choose a color for the border of the countdown boxes. Default: #FBC91E"
   },
   boxescolortext: {
-    "ui:widget": "color"
+    "ui:widget": "color",
+    "ui:help": "Choose a color for the text in the countdown boxes. Default: #FFFFFF"
   },
 };
