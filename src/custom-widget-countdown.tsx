@@ -47,8 +47,7 @@ const calculatedifference=(start: number, enddate: string)=>{
 export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxescolorborder, boxescolortext, countdowndate }: CustomWidgetCountdownProps): ReactElement => {
 
   const titleStyle: CSS.Properties = {
-    color: titlecolor,
-    margin: "5px 0px"
+    color: titlecolor
   };
 
   const containerStyle: CSS.Properties = {
@@ -67,7 +66,7 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
     background: boxescolorbg,
     color: boxescolortext,
     width: "22.5%",
-    padding: "15px 0"
+    padding: "10px 0"
   };
 
   const smalltextStyle: CSS.Properties = {
@@ -84,7 +83,7 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
     <h2 style={titleStyle}>{title}</h2>
     <div style={boxStyle}><div>{days}</div><span style={smalltextStyle}>Days</span></div>
     <div style={boxStyle}><div>{hours}</div><span style={smalltextStyle}>Hours</span></div>
-    <div style={boxStyle}><div>{minutes}</div><span style={smalltextStyle}>Mins</span></div>
-    <div style={boxStyle}><div>{seconds}</div><span style={smalltextStyle}>Secs</span></div>
+    <div style={boxStyle}><div>{minutes}</div><span style={smalltextStyle}>Minutes</span></div>
+    <div style={boxStyle}><div>{seconds}</div><span style={smalltextStyle}>Seconds</span></div>
   </div>;
 };
