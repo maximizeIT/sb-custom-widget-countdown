@@ -20,6 +20,7 @@ import { BlockAttributes } from "widget-sdk";
  */
 export interface CustomWidgetCountdownProps extends BlockAttributes {
   title: string;
+  showtitle: boolean;
   titlecolor: string;
   countdowndate: string;
   boxescolorbg: string;
@@ -44,7 +45,7 @@ const calculatedifference=(start: number, enddate: string)=>{
   return {days, hours, minutes, seconds}
 }
 
-export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxescolorborder, boxescolortext, countdowndate }: CustomWidgetCountdownProps): ReactElement => {
+export const CustomWidgetCountdown = ({ title, showtitle, titlecolor, boxescolorbg, boxescolorborder, boxescolortext, countdowndate }: CustomWidgetCountdownProps): ReactElement => {
 
   const titleStyle: CSS.Properties = {
     color: titlecolor
@@ -75,12 +76,14 @@ export const CustomWidgetCountdown = ({ title, titlecolor, boxescolorbg, boxesco
     display: "inline-block"
   };
 
+  const isTitleShown = typeof showtitle == "string" ? showtitle === "true" : !!showtitle;
+
   const [ actualdate, setactualdate ] = React.useState(Date.now());
   const { days, hours, minutes, seconds } = calculatedifference(actualdate,countdowndate)
   React.useEffect(()=>{ setInterval(()=>{setactualdate(Date.now())},1000) },[])
 
   return <div style={containerStyle}>
-    <h2 style={titleStyle}>{title}</h2>
+    {isTitleShown ? <h2 style={titleStyle}>{title}</h2> : '' }
     <div style={boxStyle}><div>{days}</div><span style={smalltextStyle}>Days</span></div>
     <div style={boxStyle}><div>{hours}</div><span style={smalltextStyle}>Hours</span></div>
     <div style={boxStyle}><div>{minutes}</div><span style={smalltextStyle}>Minutes</span></div>

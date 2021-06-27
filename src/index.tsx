@@ -50,7 +50,7 @@ const factory: BlockFactory = (BaseBlockClass, _widgetApi) => {
      */
     public static get observedAttributes(): string[] {
       const defaults = ["content-language", "widget-title", "on-card"];
-      return [...defaults, "title", "titlecolor", "countdowndate", "boxescolorbg", "boxescolorborder", "boxescolortext"];
+      return [...defaults, "title", "showtitle", "titlecolor", "countdowndate", "boxescolorbg", "boxescolorborder", "boxescolortext"];
     }
 
     /**
@@ -69,12 +69,12 @@ const factory: BlockFactory = (BaseBlockClass, _widgetApi) => {
 const blockDefinition: BlockDefinition = {
     name: "custom-widget-countdown",
     factory: factory,
-    attributes: ['title','titlecolor','countdowndate','boxescolorbg','boxescolortext','boxescolorborder'],
+    attributes: ['title','showtitle','titlecolor','countdowndate','boxescolorbg','boxescolortext','boxescolorborder'],
     blockLevel: 'block',
     configurationSchema: configurationSchema,
     uiSchema: uiSchema,
     label: 'Countdown',
-    iconUrl: "https://maximizeit.github.io/sb-custom-widget-countdown/resources/clock-icon.png",
+    iconUrl: "https://maximizeit.github.io/sb-custom-widget-countdown/resources/countdown-icon.png",
 };
 
 /**
