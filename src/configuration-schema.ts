@@ -20,7 +20,9 @@ import { JSONSchema7 } from "json-schema";
  */
 export const configurationSchema: JSONSchema7 = {
   required: [
-    "countdowndate"
+    "title",
+    "countdowndate",
+    "expiredmessage"
   ],
   properties: {  
     title: {
@@ -40,6 +42,11 @@ export const configurationSchema: JSONSchema7 = {
       type: "string",
       title: "Countdown Date + Time",
       format: "date-time"
+    },
+    expiredmessage: {
+      type: "string",
+      title: "Expired Message",
+      default: "Countdown is done."
     },
     boxescolorbg: {
       type: "string",
@@ -79,6 +86,9 @@ export const uiSchema: UiSchema = {
   },
   countdowndate: {
     "ui:help": "Choose a date and time for the countdown."
+  },
+  expiredmessage: {
+    "ui:help": "Enter an expired message for the countdown."
   },
   boxescolorbg: {
     "ui:widget": "color",
